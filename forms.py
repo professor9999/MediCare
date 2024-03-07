@@ -1,7 +1,9 @@
 from flask_wtf import FlaskForm
 from wtforms.fields import StringField, SelectField, SubmitField
+from wtforms import DecimalField
+from flask_wtf import FlaskForm
+from wtforms.fields import DecimalField, StringField, SelectField, SubmitField
 from wtforms.validators import DataRequired, Length
-from wtforms.fields.html5 import DecimalRangeField
 
 class DiagnosisForm(FlaskForm):
     diagnosis = SelectField('Diagnosis',choices=[('Schizophrenia','Schizophrenia'), ('Depression','Depression')])
@@ -30,23 +32,22 @@ class SchizophreniaDrugForm(FlaskForm):
     submit = SubmitField('Submit')
 
 class SymptomsForm(FlaskForm):
-    cognitive_symptoms = DecimalRangeField('Cognitive Symptoms')
-    negative_symptoms = DecimalRangeField('Negative Symptoms')
-    avolition = DecimalRangeField('Avolition')
-    extrapyramidal = DecimalRangeField('Extrapyramidal')
-    positive_symptoms_psychosis = DecimalRangeField('Positive Symptoms Psychosis')
-    depression = DecimalRangeField('Depression')
-    insomnia = DecimalRangeField('Insomnia')
-    anxiety = DecimalRangeField('Anxiety')
-    weight_gain = DecimalRangeField('Weight Gain')
-    apathy = DecimalRangeField('Apathy')
-    motivation = DecimalRangeField('Motivation')
-    stress = DecimalRangeField('Stress')
-    fatigue = DecimalRangeField('Fatigue')
-    suicidal_thoughts = DecimalRangeField('Suicidal Thoughts')
-    agitation = DecimalRangeField('Agitation')
+    cognitive_symptoms = DecimalField('Cognitive Symptoms')
+    negative_symptoms = DecimalField('Negative Symptoms')
+    avolition = DecimalField('Avolition')
+    extrapyramidal = DecimalField('Extrapyramidal')
+    positive_symptoms_psychosis = DecimalField('Positive Symptoms Psychosis')
+    depression = DecimalField('Depression')
+    insomnia = DecimalField('Insomnia')
+    anxiety = DecimalField('Anxiety')
+    weight_gain = DecimalField('Weight Gain')
+    apathy = DecimalField('Apathy')
+    motivation = DecimalField('Motivation')
+    stress = DecimalField('Stress')
+    fatigue = DecimalField('Fatigue')
+    suicidal_thoughts = DecimalField('Suicidal Thoughts')
+    agitation = DecimalField('Agitation')
     submit = SubmitField('Submit')
-
 
 class ProceedForm(FlaskForm):
     submit = SubmitField('Go')
