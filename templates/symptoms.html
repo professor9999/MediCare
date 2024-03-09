@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+</head>
+<body>
+    <h1>{{ title }}</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        <p>{{ form_name }}</p>
+        <!-- Add input fields for symptoms here -->
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
