@@ -8,17 +8,19 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy the current directory contents into the container at /app
 COPY . /app
 
 # Set environment variables
-ENV FLASK_APP=main.py
-ENV FLASK_RUN_PORT=8080
+# ENV FLASK_APP=main.py
+# ENV FLASK_RUN_PORT=5000
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
 
+ENTRYPOINT [ "python3" ]
+
 # Run the Flask application
-CMD ["flask", "run", "--host=0.0.0.0"]
+CMD ["main.py"]

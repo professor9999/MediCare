@@ -1,0 +1,3 @@
+Symptom1
+Symptom2
+Symptom3

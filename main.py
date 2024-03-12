@@ -16,6 +16,7 @@ def landing():
         diagnosis = request.form.get("diagnosis")
         return redirect(url_for('drugs', diagnosis=diagnosis))
     return render_template('landing.html', title = title, form = form, form_name = form_name)
+    # return render_template('landing.html')
 
 @app.route('/drugs', methods=["GET", "POST"])
 def drugs():
@@ -58,4 +59,6 @@ def results():
     return render_template('results.html', title = title, drug_1=drug_1, drug_2=drug_2, drug_3=drug_3)
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    port = int(os.environ.get('PORT', 8080))
+    app.run(debug=True, host='0.0.0.0', port=port)
+

@@ -8,7 +8,24 @@
     <form method="POST">
         {{ form.hidden_tag() }}
         <p>{{ form_name }}</p>
-        <!-- Add input fields for symptoms here -->
+        <!-- Render each form field -->
+        <p>{{ form.cognitive_symptoms.label }}: {{ form.cognitive_symptoms }}</p>
+        <p>{{ form.negative_symptoms.label }}: {{ form.negative_symptoms }}</p>
+        <p>{{ form.avolition.label }}: {{ form.avolition }}</p>
+        <p>{{ form.extrapyramidal.label }}: {{ form.extrapyramidal }}</p>
+        <p>{{ form.positive_symptoms_psychosis.label }}: {{ form.positive_symptoms_psychosis }}</p>
+        <p>{{ form.depression.label }}: {{ form.depression }}</p>
+        <p>{{ form.insomnia.label }}: {{ form.insomnia }}</p>
+        <p>{{ form.anxiety.label }}: {{ form.anxiety }}</p>
+        <p>{{ form.weight_gain.label }}: {{ form.weight_gain }}</p>
+        <p>{{ form.apathy.label }}: {{ form.apathy }}</p>
+        <p>{{ form.motivation.label }}: {{ form.motivation }}</p>
+        <p>{{ form.stress.label }}: {{ form.stress }}</p>
+        <p>{{ form.fatigue.label }}: {{ form.fatigue }}</p>
+        <p>{{ form.suicidal_thoughts.label }}: {{ form.suicidal_thoughts }}</p>
+        <p>{{ form.agitation.label }}: {{ form.agitation }}</p>
+        <!-- Add more form fields as needed -->
+
         <button type="submit">Submit</button>
     </form>
 </body>

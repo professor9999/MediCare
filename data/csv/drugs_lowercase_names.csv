@@ -1,0 +1,5 @@
+name,description,id,diagnosis,mechanics
+drug1,Description of drug 1,1,depression,["mechanic1", "mechanic2"]
+drug2,Description of drug 2,2,depression,["mechanic3", "mechanic4"]
+drug3,Description of drug 3,3,schizophrenia,["mechanic5", "mechanic6"]
+drug4,Description of drug 4,4,schizophrenia,["mechanic7", "mechanic8"]
